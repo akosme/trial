@@ -1396,7 +1396,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <div>
               <Card className="p-10 bg-white/95 backdrop-blur-md shadow-2xl border border-white/30 hover:shadow-3xl transition-all duration-500 rounded-3xl">
                 {/* <form className="space-y-8" onSubmit={handleFormSubmit}> */}
-                <form name="contact" method="POST" data-netlify="true" className="space-y-8" onSubmit={handleFormSubmit}>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="space-y-8" onSubmit={handleFormSubmit}>
                   <input type="hidden" name="form-name" value="contact" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
