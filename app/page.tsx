@@ -681,7 +681,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               Technológia
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              A mikrobiom-elemzés során két fő technológiát alkalmaznak: a 16S rRNA szekvenálást és a Shotgun
+              A mikrobiom-elemzés során két fő technológiát alkalmaznak: a 16S RNS szekvenálást és a Shotgun
               metagenomikát. Mindkettőnek megvannak az előnyei és hátrányai.
             </p>
           </div>
@@ -703,7 +703,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                       : "text-gray-600 hover:text-orange-500 hover:bg-orange-50"
                   }`}
                 >
-                  16S rRNA szekvenálás
+                  16S RNS szekvenálás
                 </button>
                 <button
                   onClick={() => setActiveTab("shotgun")}
@@ -818,7 +818,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 </div>
 
                 <div className="p-8 bg-gradient-to-br from-white to-orange-50/30">
-                  <h3 className="font-bold text-xl mb-6 text-orange-600">16S rRNA szekvenálás</h3>
+                  <h3 className="font-bold text-xl mb-6 text-orange-600">16S RNS szekvenálás</h3>
                   <div className="space-y-6 text-gray-700">
                     <div className="py-3 bg-orange-50/50 rounded-lg px-4">Genus (nemzetség) szintű azonosítás</div>
                     <div className="py-3 bg-orange-50/50 rounded-lg px-4">Korlátozott</div>
