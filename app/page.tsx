@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import type { Metadata } from "next";
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -247,6 +248,26 @@ export default function Home() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
   }
+
+const metadata: Metadata = {
+  title: "JustHealthy",
+  description: "Független mikrobiom vizsgálat otthoni mintavétellel. Online elemzés és tanácsadás a jobb egészségért.",
+  openGraph: {
+    title: "JustHealthy",
+    description: "Egészséged kulcsa a mikrobiom. Gyors, kényelmes és pontos elemzés otthonról.",
+    url: "https://justhealthy.hu",
+    siteName: "JustHealthy",
+    locale: "hu_HU",
+    type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+}
 
 const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault()
