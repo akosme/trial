@@ -262,6 +262,8 @@ const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" }, // legacy support for Safari/IE
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
     ],
@@ -1394,8 +1396,8 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <div>
               <Card className="p-10 bg-white/95 backdrop-blur-md shadow-2xl border border-white/30 hover:shadow-3xl transition-all duration-500 rounded-3xl">
                 {/* <form className="space-y-8" onSubmit={handleFormSubmit}> */}
-                <form name="contact2" method="POST" data-netlify="true" className="space-y-8" onSubmit={handleFormSubmit}>
-                  <input type="hidden" name="form-name" value="contact2" />
+                <form name="contact" method="POST" data-netlify="true" className="space-y-8" onSubmit={handleFormSubmit}>
+                  <input type="hidden" name="form-name" value="contact" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
                       Név *
