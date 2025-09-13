@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+      >
+        <!-- required so Netlify associates submissions with this form -->
+        <input type="hidden" name="form-name" value="contact" />
+          
+        <!-- Visible form fields (kept hidden so Netlify will parse them) -->
+        <div><label htmlFor="name">Név * </label>
+          <Input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Az Ön neve"
+              required
+            />
+          </div>
+        <div><label htmlFor="email" >Email * </label>
+          <Input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="email@example.com"
+              required
+            />
+          </div>
+        <div><label htmlFor="message" >Üzenet * </label>
+          <Textarea
+            id="message"
+            name="message"
+            placeholder="Írja le kérdését vagy kérését..."
+            rows={5}
+            required
+          />
+        </div>
+      
+        <div><button type="submit">Küldés</button></div>
+      </form>
+    </body>
+</html>
