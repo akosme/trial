@@ -248,28 +248,16 @@ export default function Home() {
     setIsMobileMenuOpen(false)
   }
 
-const encode = (data: Record<string, string>) =>
-  Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-
 const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault()
   const form = e.currentTarget
   const formData = new FormData(form)
 
-  const data = {
-    "form-name": "contact",
-    name: formData.get("name") as string,
-    email: formData.get("email") as string,
-    message: formData.get("message") as string,
-  }
-
   try {
-    const res = await fetch("/", {
+    const res = await fetch("/netlify-hidden-form.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode(data),
+      body: new URLSearchParams(formData as any).toString(),
     })
 
     if (res.ok) {
