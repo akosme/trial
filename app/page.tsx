@@ -277,7 +277,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const formData = new FormData(form)
 
   try {
-    const res = await fetch("/netlify-hidden-form.html", {
+    const res = await fetch("/__form.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as any).toString(),
@@ -332,7 +332,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 href="#home"
                 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-orange-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
               >
-                justhealthy.hu
+                Just.Healthy
               </a>
             </div>
 
